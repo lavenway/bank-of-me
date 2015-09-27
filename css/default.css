@@ -1,0 +1,246 @@
+/******************* GENERAL ******************/
+html, body { height: 100%; }
+
+body {
+    font: 18px arial,helvetica,sans-serif;
+    background: url(../assets/bank3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+*, *:before, *:after  {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    clear: both;
+    display: table;  
+}
+.clearfix { zoom: 1; }
+
+.float-l { float: left; }
+.float-r { float: right; }
+
+
+/******************* HEADER ******************/
+#upper-header {
+    background: #fdfdfd;
+}
+
+#upper-header .logo {
+    float: left;
+    margin: 10px 0;
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#upper-header .logo img {
+    display: block;
+}
+
+#upper-header .home {
+    float: left;
+    vertical-align: top;
+    padding: 30px;    
+    font-size: 48px;    
+    background: #d8d8d8;
+}
+
+#upper-header .home:hover {
+    background: #e16399;
+}
+
+#upper-header .home:hover i {
+    color: #fff;
+}
+
+#upper-header .home i {   
+    color: #555555;
+}
+
+#upper-header .float-r {   
+    margin-top: 30px;
+}
+
+.mobile #upper-header .float-r .dropdown {   
+    z-index: 1;
+    position: absolute;
+    right: 30px;
+    width: 40%;
+    border: 1px solid #777;
+    background: #fff;
+}
+
+.mobile #upper-header .float-r .dropdown a {   
+    display: block;
+    margin: 0;
+    padding: 20px;
+    text-align: right;
+}
+
+#upper-header .float-r a {   
+    margin-right: 60px;
+    font-size: 40px;
+    color: #777777;
+}
+
+#upper-header .float-r a.hidden {   
+    display: none;
+    margin: 0 30px;
+    padding: 10px 20px;
+    border: 1px solid #d8d8d8;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#upper-header .float-r a.last {   
+    margin-right: 30px;
+}
+
+#upper-header .float-r a:hover i {   
+    color: #e16399;
+}
+
+#upper-header .float-r a span {   
+    display: none;
+    font-size: 18px;
+}
+
+
+/******************* MAIN ******************/
+#primary-nav {   
+    border-bottom: 2px solid #fff;
+    background: #469ceb;
+}
+
+#primary-nav ul {
+    width: 80%;
+    margin: 0 auto;  
+}
+
+#primary-nav ul li.first {
+    margin-left: 0;
+}
+
+#primary-nav ul li {
+    display: inline-block;
+    width: 25%;
+    margin-left: -5px;
+    border-left: 2px solid #fff;
+}
+
+#primary-nav ul li.last {    
+    border-right: 2px solid #fff;
+}
+
+#primary-nav ul li a {
+    display: block;
+    padding: 30px 0 24px;
+    color: #fff;
+    text-align: center;
+}
+
+#primary-nav ul li a:hover {
+    background: #e16399;
+}
+
+#primary-nav ul li a i {
+    font-size: 34px;
+}
+
+#primary-nav ul li a span {
+    display: block;
+    margin-top: 12px;
+    font-size: 24px;
+}
+
+/******************* MAIN ******************/
+#main .info:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: #7ea8cd;
+}
+
+#main .info {
+    position: relative;
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+#main .info h1 {
+    margin-bottom: 80px;
+}
+
+#main .info p {
+    margin-top: 24px;    
+    font-size: 22px;
+    line-height: 40px;
+}
+
+#main .cta-links {
+    width: 50%;
+    margin: 90px auto 0;
+}
+
+#main .cta-links a {
+    display: inline-block;
+    width: 46%;
+    margin: 0 10px 20px;
+    padding: 38px 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    border: 4px solid #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#main .cta-links a.last {
+    margin: 0 26% 20px;
+}
+
+#main .cta-links a:hover {
+    background: #e16399;
+}
+
+
+/******************* RESPONSIVE ******************/
+
+@media only screen and (max-width: 784px) {
+    #upper-header .float-r { margin-top: 24px; }
+    #upper-header .float-r a.hidden { display: block; }
+    #upper-header .float-r .dropdown { display: none; }
+    #upper-header .float-r .dropdown a span { display: block; }
+    #upper-header .float-r .dropdown a i { display: none; }
+    #main .info, #main .cta-links { width: 100%; 
+    #main .cta-links { margin-top: 20px; }
+    #main .cta-links a, #main .cta-links a.last { width: 100%; margin: 0 0 20px; }
+}
